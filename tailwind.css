@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rating {
+    direction: rtl;
+    display: inline-block;
+}
+
+.star {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2em;
+    color: lightgray;
+}
+
+.star:hover,
+.star:hover~.star {
+    color: rgb(60, 190, 60);
+}
