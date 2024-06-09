@@ -4,10 +4,11 @@
     "description": "A simple form demo",
     "main": "index.js",
     "scripts": {
-    "build": "postcss tailwind.css -o dist/scripts/tailwind.css"
-},
+        "build": "postcss tailwind.css -o dist/scripts/tailwind.css"
+    },
     "dependencies": {
         "autoprefixer": "^10.4.19",
+        "axios": "^1.7.2",
         "postcss-cli": "^11.0.0",
         "tailwindcss": "^3.4.4",
         "watch": "^1.0.2"

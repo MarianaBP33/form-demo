@@ -5,45 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="dist/scripts/tailwind.css" />    
 <script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 <title>Form Demo</title>
 </head>
 <body class="flex items-center justify-center p-8 bg-gray-100">
-<form class="w-full m-12 my-6 bg-white p-8 rounded shadow">
+<form class="w-full m-12 my-6 bg-white p-8 rounded shadow" id ="form">
             <div class="flex mb-5 mt-5 items-start justify-center">
             <h1 class="text-md font-medium text-gray-900 dark:text-black py-1 px-2">FEEDBACK FORM</h1>
+            <button id="submitBtn" class="bg-blue-400">PRESS ME </button>
+            <input type="file" id="audioFileInput">
         </div>
         <div class="mb-5">
             <div class="mb-5 mt-5">
                 <h2 class="text-sm font-medium text-gray-900 dark:text-black bg-gray-200 py-1 px-2">PROJECT FIT</h2>
             </div>
-            <input type="radio" id="yes" name="options" value="option1" class="mr-1" required>
-            <label for="option1" class="text-sm font-medium text-gray-900 dark:text-black">Yes</label><br>
-
-            <input type="radio" id="maybe" name="options" value="option2" class="mr-1" required>
-            <label for="option2" class="text-sm font-medium text-gray-900 dark:text-black">Maybe</label><br>
-
-            <input type="radio" id="no" name="options" value="option3" class="mr-1" required>
-            <label for="option3" class="text-sm font-medium text-gray-900 dark:text-black">No</label><br>
+            
+        <input type="radio" id="option1" name="options" value="yes" class="mr-1">
+        <label for="option1" class="text-sm font-medium text-gray-900 dark:text-black">Yes</label><br>
+        
+        <input type="radio" id="option2" name="options" value="maybe" class="mr-1">
+        <label for="option2" class="text-sm font-medium text-gray-900 dark:text-black">Maybe</label><br>
+        
+        <input type="radio" id="option3" name="options" value="no" class="mr-1">
+        <label for="option3" class="text-sm font-medium text-gray-900 dark:text-black">No</label><br>
         </div>
         <div class="mb-5 mt-5">
             <h2 class="text-sm font-medium text-gray-900 dark:text-black bg-gray-200 py-1 px-2">SKILLS FROM POSITION</h2>
         </div>  
         <span class="text-md font-bold">Java</span>
-        <div class="rating">
+        <div class="rating" data-skill="Java">
             <span class="star" data-value="expert">[]</span>
             <span class="star" data-value="advance">[]</span>
             <span class="star" data-value="intermediate">[]</span>
             <span class="star" data-value="novice">[]</span>
         </div><br>
         <span class="text-md font-bold">Amazon Web Services</span>
-        <div class="rating">
+        <div class="rating" data-skill="Amazon Web Services">
             <span class="star" data-value="expert">[]</span>
             <span class="star" data-value="advance">[]</span>
             <span class="star" data-value="intermediate">[]</span>
             <span class="star" data-value="novice">[]</span>
         </div><br>
         <span class="text-md font-bold">Spring Boot</span>
-        <div class="rating">
+        <div class="rating"data-skill="Spring Boot">
             <span class="star" data-value="expert">[]</span>
             <span class="star" data-value="advance">[]</span>
             <span class="star" data-value="intermediate">[]</span>
@@ -66,25 +71,25 @@
             <h2 class="text-sm font-medium text-gray-900 dark:text-black bg-gray-200 py-1 px-2">FEEDBACK TEMPLATE FIELDS</h2>
         </div>
         <div class="mb-5">
-            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Sumary</label>
+            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Sumary</label>
             <textarea id="summary" name="summary"
                 class="block w-full mt-1 rounded-md shadow-sm focus:ring focus:ring-black-200 focus:ring-opacity-100"
                 style="border-color: black; outline-color: black;"></textarea>
         </div>
         <div class="mb-5">
-            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">When candidate is ready to enter the project </label>
+            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">When candidate is ready to enter the project </label>
             <textarea id="enterProject" name="enterProject"
                 class="block w-full mt-1 rounded-md shadow-sm focus:ring focus:ring-black-200 focus:ring-opacity-100"
                 style="border-color: black; outline-color: black;"></textarea>
         </div>
         <div class="mb-5">
-            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">What candidate is looking for</label>
+            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">What candidate is looking for</label>
             <textarea id="lookingFor" name="lookingFor"
                 class="block w-full mt-1 rounded-md border-black-300 shadow-sm focus:border-black-300 focus:ring focus:ring-black-200 focus:ring-opacity-100"
                 style="outline-color: black;"></textarea>
         </div>
         <div class="mb-5">
-            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Comments to checked skills</label>
+            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Comments to checked skills</label>
             <textarea id="comments" name="comments"
                 class="block w-full mt-1 rounded-md border-black-300 shadow-sm focus:border-black-300 focus:ring focus:ring-black-200 focus:ring-opacity-100"
                 style="outline-color: black;"></textarea>
@@ -94,6 +99,6 @@
     </form>
 
     
-
+<script src="./script.js"></script>
 </body>
 </html>
