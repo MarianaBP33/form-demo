@@ -13,8 +13,10 @@
 <form class="w-full m-12 my-6 bg-white p-8 rounded shadow" id ="form">
             <div class="flex mb-5 mt-5 items-start justify-center">
             <h1 class="text-md font-medium text-gray-900 dark:text-black py-1 px-2">FEEDBACK FORM</h1>
-            <button id="submitBtn" class="bg-blue-400">PRESS ME </button>
+        </div>
+        <div>
             <input type="file" id="audioFileInput">
+            <button id="submitBtn" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Press To Generate</button>
         </div>
         <div class="mb-5">
             <div class="mb-5 mt-5">
@@ -33,39 +35,17 @@
         <div class="mb-5 mt-5">
             <h2 class="text-sm font-medium text-gray-900 dark:text-black bg-gray-200 py-1 px-2">SKILLS FROM POSITION</h2>
         </div>  
-        <span class="text-md font-bold">Java</span>
-        <div class="rating" data-skill="Java">
-            <span class="star" data-value="expert">[]</span>
-            <span class="star" data-value="advance">[]</span>
-            <span class="star" data-value="intermediate">[]</span>
-            <span class="star" data-value="novice">[]</span>
-        </div><br>
-        <span class="text-md font-bold">Amazon Web Services</span>
-        <div class="rating" data-skill="Amazon Web Services">
-            <span class="star" data-value="expert">[]</span>
-            <span class="star" data-value="advance">[]</span>
-            <span class="star" data-value="intermediate">[]</span>
-            <span class="star" data-value="novice">[]</span>
-        </div><br>
-        <span class="text-md font-bold">Spring Boot</span>
-        <div class="rating"data-skill="Spring Boot">
-            <span class="star" data-value="expert">[]</span>
-            <span class="star" data-value="advance">[]</span>
-            <span class="star" data-value="intermediate">[]</span>
-            <span class="star" data-value="novice">[]</span>
+        <div class="skills">
+            <span
+                class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium border border-gray-800 text-gray-800 dark:border-neutral-200 dark:text-black invisible ... " ></span>
         </div>
-        
 
         <div class="mb-5 mt-5">
             <h2 class="text-sm font-medium text-gray-900 dark:text-black bg-gray-200 py-1 px-2">SKILLS ADDED BY INTERVIEWER</h2>
         </div>
-        <div class="mb-5">
-            <select id="skills" name="skills"
-                class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-            </select>
+        <div class="skills2">
+            <span
+                class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium border border-gray-800 text-gray-800 dark:border-neutral-200 dark:text-black invisible ... "></span>
         </div>
         <div class="mb-5 mt-5">
             <h2 class="text-sm font-medium text-gray-900 dark:text-black bg-gray-200 py-1 px-2">FEEDBACK TEMPLATE FIELDS</h2>
